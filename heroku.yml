@@ -1,0 +1,5 @@
+build:
+  docker:
+      worker: /Database/Dockerfile
+run:
+   worker: npm start
