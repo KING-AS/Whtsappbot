@@ -1,7 +1,9 @@
-FROM quay.io/lyfe00011/test:beta
+FROM fusuf/whatsasena:latest
 
 RUN git clone https://github.com/KING-AS/Whtsappbot /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
+ENV TZ=Europe/Istanbul
+RUN npm install supervisor -g
 RUN yarn install --no-audit
-RUN cp -R /root/Utils/* /root/WhatsAsenaDuplicated 
+
 CMD ["node", "bot.js"]
