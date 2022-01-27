@@ -3,6 +3,6 @@ FROM quay.io/lyfe00011/test:beta
 RUN git clone https://github.com/KING-AS/Whtsappbot /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
 RUN yarn install --no-audit
-RUN git clone https://github.com/html/photo
+RUN git clone https://github.com/
 RUN cp -R /root/Utils/* /root/WhatsAsenaDuplicated 
 CMD ["node", "bot.js"]
